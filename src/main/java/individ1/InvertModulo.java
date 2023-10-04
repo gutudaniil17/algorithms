@@ -2,8 +2,8 @@ package individ1;
 
 public class InvertModulo {
     public static void main(String[] args) {
-        final int a = 4127;
-        final int m = 1303;
+        final int a = 1777;
+        final int m = 2699;
         // Before calling computeModularInverse, check if a and m are valid.
         if (a <= 0 || m <= 0) {
             throw new IllegalArgumentException("Invalid values: a and m should be positive.");
