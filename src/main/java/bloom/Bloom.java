@@ -1,3 +1,5 @@
+package bloom;
+
 public class Bloom {
     private Integer z;
     private Integer[][] D;

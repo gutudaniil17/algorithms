@@ -1,3 +1,5 @@
+package hellman;
+
 public class Hellman {
     public static void main(String[] args) {
         KeyProvider provider1 = new KeyProvider(23, 5, 3);

@@ -1,3 +1,5 @@
+package rc2;
+
 import java.math.BigInteger;
 import java.nio.charset.StandardCharsets;
 import java.util.ArrayList;
@@ -92,12 +94,12 @@ public class RC2 {
         System.out.println("Concatenating b, c, d, a => " + prettyBinary(encryption, 8, " "));
 
         // Result
-        String result = "";
+        StringBuilder result = new StringBuilder();
         int aDecimal = Integer.parseInt(a, 2);
         String aHex = Integer.toString(aDecimal, 16);
         for (int i = 0; i < bcd.length()/8; i++) {
             int az = Integer.parseInt(bcd.substring(8*i,(i+1)*8),2);
-            result += (char)(az);
+            result.append((char) (az));
         }
         System.out.println("Result = " + "\"" + result + "\"" + " + \"" + aHex + "\"");
 
@@ -132,11 +134,11 @@ public class RC2 {
         System.out.println("\nStep 6: part5 - CV => " + part6Int + " = " + part6);
 
         // Step 7
-        result = "";
+        result = new StringBuilder();
         String abcd = part6.concat(b).concat(c).concat(d);
         for (int i = 0; i < abcd.length()/8; i++) {
             int az = Integer.parseInt(abcd.substring(8*i,(i+1)*8),2);
-            result += (char)(az);
+            result.append((char) (az));
         }
         System.out.println("Result = " + "\"" + result + "\"");
     }
